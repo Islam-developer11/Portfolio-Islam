@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+--color-portfolio-bg: #DDD3C9;
+--color-cardigan: #E0A1A0;
+--color-hijab: #E8D5C3;
+--color-pants: #F2E2C8;
+--color-shirt: #FAF7F2;
+
+--color-portfolio-primary: #B87568;
+--color-portfolio-primary-dark: #9F6257;
+
+--color-portfolio-text: #3E302C;
+--color-portfolio-muted: #665650;
+}
+html {
+  scroll-behavior: smooth;
+}

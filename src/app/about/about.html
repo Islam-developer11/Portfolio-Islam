@@ -1,0 +1,107 @@
+<section id="about" class="scroll-mt-24 py-24 max-w-7xl mx-auto px-6 lg:px-10 text-portfolio-text">
+  <!-- شبكة رئيسية تضم العنوان والكارد عشان يكونوا على نفس المستوى -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start w-full">
+    <!-- الجانب الأيسر: العنوان + النبذة -->
+    <div class="space-y-8">
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-bold tracking-tight mb-3">{{ title }}</h2>
+        <div class="w-16 h-1 bg-portfolio-primary rounded-full"></div>
+      </div>
+
+      <p class="text-lg leading-relaxed text-portfolio-text/90">
+        I am a Software Engineering graduate from
+        <span class="font-semibold text-portfolio-primary">{{ university }}</span> With Excellent
+        Grade.
+        <br />
+        Passionate about building responsive web applications, exploring infrastructure, and
+        continuously expanding my technical toolkit.
+      </p>
+
+      @if (showMoreDetails) {
+        <div
+          class="p-5 rounded-2xl bg-portfolio-primary/10 border border-portfolio-primary/30 transition-all duration-300"
+        >
+          <p class="text-sm leading-relaxed text-portfolio-text">
+            My background covers both front-end and back-end fundamentals, from crafting clean
+            Angular interfaces to developing robust server-side logic and database structures.
+          </p>
+        </div>
+      }
+
+      <button
+        (click)="toggleDetails()"
+        class="px-6 py-3 rounded-full border border-portfolio-primary text-portfolio-primary font-semibold hover:bg-portfolio-primary hover:text-white transition-all duration-300 shadow-sm"
+      >
+        {{ showMoreDetails ? 'Show Less' : 'Read More' }}
+      </button>
+    </div>
+
+    <!-- الجانب الأيمن: التبويبات (الكارد) ليصير موازي للعنوان تماماً -->
+    <div
+      class="bg-portfolio-bg/50 backdrop-blur-md p-8 rounded-3xl border border-portfolio-primary/20 shadow-lg w-full lg:mt-2"
+    >
+      <!-- أزرار التبديل -->
+      <div class="flex gap-6 mb-6 border-b border-portfolio-primary/20 pb-4 text-sm font-semibold">
+        <button
+          (click)="activeTab = 'skills'"
+          [class.text-portfolio-primary]="activeTab === 'skills'"
+          class="pb-1 transition-colors cursor-pointer"
+        >
+          Skills
+        </button>
+        <button
+          (click)="activeTab = 'interests'"
+          [class.text-portfolio-primary]="activeTab === 'interests'"
+          class="pb-1 transition-colors cursor-pointer"
+        >
+          Interests
+        </button>
+        <button
+          (click)="activeTab = 'experience'"
+          [class.text-portfolio-primary]="activeTab === 'experience'"
+          class="pb-1 transition-colors cursor-pointer"
+        >
+          Experience
+        </button>
+      </div>
+
+      <!-- محتوى الـ Switch -->
+      <div class="min-h-[140px]">
+        @switch (activeTab) {
+          @case ('skills') {
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-2">
+                💻 <span>Angular & TypeScript (Standalone Components)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                ⚡ <span>Tailwind CSS & Responsive UI Design</span>
+              </li>
+              <li class="flex items-center gap-2">
+                🔧 <span>.NET Core Web API & PHP Laravel</span>
+              </li>
+            </ul>
+          }
+          @case ('interests') {
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-2">🎨 <span>Arts & Sketchbooking</span></li>
+              <li class="flex items-center gap-2">🏊‍♀️ <span>Fitness & Swimming</span></li>
+            </ul>
+          }
+          @case ('experience') {
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-center gap-2">
+                🚀 <span>Full-Stack Developer Intern @Chain Reaction</span>
+              </li>
+              <li class="flex items-center gap-2">
+                🎓 <span>Graduation Project "ELECTRA" (EV Management System)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                🚀 <span>Full-Stack Developer Intern @Csmena</span>
+              </li>
+            </ul>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</section>
