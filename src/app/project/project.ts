@@ -44,7 +44,7 @@ export class Project {
       description:
         'Responsive Single Page Application built from scratch using Angular Standalone Components and Tailwind CSS for smooth layout navigation.',
       technologies: ['Angular 17+', 'Tailwind CSS', 'TypeScript'],
-      githubUrl: 'https://github.com/Islam-developer11/Electra', // يمكنك تعديل الرابط لاحقاً لرابط البورتفوليو
+      githubUrl: 'https://portfolio-islam-three.vercel.app',
     },
   ];
 }
