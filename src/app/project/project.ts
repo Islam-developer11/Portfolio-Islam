@@ -7,6 +7,7 @@ export interface ProjectItem {
   description: string;
   technologies: string[];
   githubUrl?: string;
+  demoUrl?: string; // 👈 أضيفي هذا السطر
   footerLabel?: string;
 }
 
@@ -44,7 +45,8 @@ export class Project {
       description:
         'Responsive Single Page Application built from scratch using Angular Standalone Components and Tailwind CSS for smooth layout navigation.',
       technologies: ['Angular 17+', 'Tailwind CSS', 'TypeScript'],
-      githubUrl: 'https://portfolio-islam-three.vercel.app',
+      githubUrl: 'https://github.com/Islam-developer11/Portfolio-Islam', // 👈 رابط كود الجت هب الصحيح
+      demoUrl: 'https://portfolio-islam-three.vercel.app', // 👈 رابط المعرض المباشر على فيرسل
     },
   ];
 }
