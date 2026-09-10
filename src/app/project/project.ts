@@ -45,8 +45,7 @@ export class Project {
       description:
         'Responsive Single Page Application built from scratch using Angular Standalone Components and Tailwind CSS for smooth layout navigation.',
       technologies: ['Angular 17+', 'Tailwind CSS', 'TypeScript'],
-      githubUrl: 'https://github.com/Islam-developer11/Portfolio-Islam', // 👈 رابط كود الجت هب الصحيح
-      demoUrl: 'https://portfolio-islam-three.vercel.app', // 👈 رابط المعرض المباشر على فيرسل
+      githubUrl: 'https://github.com/Islam-developer11/Portfolio-Islam', // 👈 كود الجت هب المباشر بس
     },
   ];
 }
